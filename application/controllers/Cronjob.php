@@ -22,8 +22,8 @@ class Cronjob extends CI_Controller
     public function cekStok()
     {
         // ambil data 5tahun
-        $qty = $_GET['quantity'];
-        $sql = "SELECT * FROM produk WHERE stok <= $qty";
+        // $qty = $_GET['quantity'];
+        $sql = "SELECT * FROM produk WHERE stok <= 10";
         $data = $this->db->query($sql);
 
         if ($data->num_rows() > 0) {
